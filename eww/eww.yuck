@@ -1,0 +1,61 @@
+(defwindow toolbar
+:monitor '[1]'
+:geometry (geometry :x "0%"
+	:y "0px"
+	:width "10%"
+	:height "30px"
+	:anchor "top center")
+:stacking "fg"
+:windowtype "dock"
+:exclusive true
+:wm-ignore false
+(clock)
+)
+
+(defpoll current_time :interval "1s"
+	      :initial "initial-value"
+	'date +%l:%M%p')
+
+(defpoll current_date :interval "1s"
+	      :initial "initial-value"
+	'date +%e/%d/%y')
+
+
+(defwidget clock []
+  (box :orientation "horizontal"
+	 (label :text "${current_date}" :class "date" )
+   (label :text "${current_time}" :class "time" :align "center")
+  )
+  )
+
+
+(defwindow powermenu
+:monitor 1
+:geometry (geometry :x "0%"
+	:y "0%"
+	:width "20%"
+	:height "10%"
+	:anchor "center")
+:stacking "fg"
+:valign "center"
+:halign "center"
+:windowtype "dock"
+:wm-ignore false
+(powermenu_layout :width "20%")
+)
+
+(defwidget powermenu_layout []
+    (box :orientation "vertical"
+     
+
+    (box :orientation "horizontal" :class "horizontal"
+
+        (button :class "powermanagement-btn" :onclick "niri msg action quit" "󰍃")
+
+        (button :class "powermanagement-btn" :onclick "reboot" "")
+
+        (button :class "powermanagement-btn" :onclick "poweroff" "󰐥")
+
+    )
+  )
+)

@@ -1,0 +1,48 @@
+* {
+  all: unset; // Unsets everything so you can style everything from scratch
+}
+
+// Global Styles
+.toolbar {
+  background-color: rgba(30, 30, 46, 0.99);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-family: 'JetBrainsMono NFM';
+  font-weight: bold;
+}
+
+.powermenu{
+  background: rgba(30, 30, 46, 0.99);
+  border-radius: 2.5em;
+  font-family: 'JetBrainsMono NGM';
+  padding: 0.2em;
+  border: 15px solid rgb(180, 190, 254);
+}
+
+.powermanagement-btn{
+  background-color: rgb(180, 190, 254);
+
+  border-radius: 0.35em;
+  margin: .05em;
+  padding: 0.5em;
+  color: rgb(30, 30, 46);
+  font-size: 54px;
+  font-weight: bold;
+}
+
+.date {
+  color: rgb(180, 190, 254);
+}
+
+.time {
+  color: rgb(180, 190, 254);
+}
+
+.powermanagement-btn:hover {
+  background-color: rgb(140, 150, 214);
+  transition: background-color 0.3s ease;
+}
+
+.label {
+  font-weight: bold;
+}
